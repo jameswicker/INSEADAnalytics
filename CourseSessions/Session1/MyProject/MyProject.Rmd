@@ -1,0 +1,41 @@
+---
+title: "MyProject"
+output: html_document
+---
+```{r eval = TRUE, echo=TRUE, comment=NA, warning=FALSE, message=FALSE,results='markup'}
+ProjectData <- read.csv(file = "data/Boats.csv", header = TRUE, sep=",")
+```
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+##### Questions
+
+1. Can you find which column asks about the name of the brand rated? 
+2. Can you find the average rating to question " `r gsub("_", " ", gsub("\\.", " ", "Q1_3_The.brand.of.boat.I.buy.says.a.lot.about.who.I.am"))` ".
+3. Which of the R packages or github repositories you explored did you find interesting?
+4. *(Extra)* What is the percentage of male in this population? How many of them responded that they plan to purchase a boat in the future? 
+5. Finally, once you answer all questions, please commit-then-push to your github (as shown in steps 3-5 of the [Getting Started Instructions](https://github.com/InseadDataAnalytics/INSEADAnalytics/wiki/Getting-Started) document) your file as well as all other files in the new directory you created.
+
+**Your Answers here:**
+
+1.
+```{r eval = TRUE, echo=TRUE, comment=NA, warning=FALSE, message=FALSE,results='markup'}
+print(colnames(ProjectData)[53])
+```
+
+2.
+```{r eval = TRUE, echo=TRUE, comment=NA, warning=FALSE, message=FALSE,results='markup'}
+mean(ProjectData[,4])
+```
+
+3. tictactoe
+
+4. 
+
+<br>
+<br>
+
+<hr>
+<hr>
